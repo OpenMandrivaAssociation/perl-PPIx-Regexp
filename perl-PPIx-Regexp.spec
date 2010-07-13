@@ -1,5 +1,5 @@
 %define upstream_name    PPIx-Regexp
-%define upstream_version 0.006
+%define upstream_version 0.008
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
