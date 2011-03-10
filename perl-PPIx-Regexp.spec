@@ -1,9 +1,9 @@
 %define upstream_name    PPIx-Regexp
-%define upstream_version 0.018
+%define upstream_version 0.019
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Represent an independent subexpression marker
 License:    GPL+ or Artistic
