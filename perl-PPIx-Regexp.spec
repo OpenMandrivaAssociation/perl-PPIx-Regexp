@@ -1,15 +1,16 @@
-%define modname	PPIx-Regexp
-%define modver	0.020
+%define upstream_name    PPIx-Regexp
+%define upstream_version 0.036
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
 
 Summary:	Represent an independent subexpression marker
-Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	10
-License:	GPLv2+ or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/PPIx/%{modname}-%{modver}.tar.gz
-BuildArch:	noarch
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/authors/id/W/WY/WYANT/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(List::Util)
 BuildRequires:	perl(PPI::Document)
@@ -18,6 +19,7 @@ BuildRequires:	perl(Readonly)
 BuildRequires:	perl(Scalar::Util)
 BuildRequires:	perl(Task::Weaken)
 BuildRequires:	perl-devel
+BuildArch:	noarch
 
 %description
 The purpose of the _PPIx-Regexp_ package is to parse regular expressions in
@@ -29,10 +31,10 @@ is,
 
  my $expr = 's/ ( \d+ ) ( \D+ ) /$2$1/smxg';
  my $re = PPIx::Regexp->new( $expr );
- print $re->content() eq $expr ? "yes\n" :	"no\n"
+ print $re->content() eq $expr ? "yes\n" : "no\n"
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -46,6 +48,5 @@ is,
 
 %files
 %doc Changes META.yml README
-%{perl_vendorlib}/*
 %{_mandir}/man3/*
-
+%{perl_vendorlib}/*
