@@ -8,7 +8,7 @@ Release:	8
 Summary:	Represent an independent subexpression marker
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/authors/id/W/WY/WYANT/%{upstream_name}-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(List::MoreUtils)
