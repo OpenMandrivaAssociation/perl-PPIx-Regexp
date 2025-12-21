@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/authors/id/W/WY/WYANT/%{upstream_name}-%{upstream_version}.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl(List::MoreUtils)
 BuildRequires:	perl(List::Util)
 BuildRequires:	perl(PPI::Document)
