@@ -1,15 +1,15 @@
 %define upstream_name    PPIx-Regexp
-%define upstream_version 0.036
+%define upstream_version 0.092
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	8
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Represent an independent subexpression marker
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/authors/id/W/WY/WYANT/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/trwyant/perl-PPIx-Regexp
+Source0:	https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl(List::MoreUtils)
