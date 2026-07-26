@@ -1,15 +1,13 @@
 %define upstream_name    PPIx-Regexp
-%define upstream_version 0.092
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.092
+Release:	2
 
 Summary:	Represent an independent subexpression marker
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/trwyant/perl-PPIx-Regexp
-Source0:	https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl(List::MoreUtils)
@@ -35,7 +33,7 @@ is,
  print $re->content() eq $expr ? "yes\n" : "no\n"
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
